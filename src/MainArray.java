@@ -20,6 +20,8 @@ public class MainArray {
         System.out.println("Get r1: " + arrayStorage.get(r1.uuid));
         System.out.println("Size: " + arrayStorage.size());
 
+        System.out.println("Get dummy: " + arrayStorage.get("dummy"));
+
         printAll();
         arrayStorage.delete(r1.uuid);
         printAll();

@@ -46,7 +46,8 @@ public class ArrayStorage {
      * @return array, contains only Resumes in storage (without null)
      */
     public Resume[] getAll() {
-        return new Resume[0];
+        Resume[] result = new Resume[size];
+        return result;
     }
 
     public int size() {

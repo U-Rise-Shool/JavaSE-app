@@ -1,5 +1,7 @@
+package com.urise.webapp.model;
+
 /**
- * Resume class
+ * com.urise.webapp.model.Resume class
  */
 public class Resume {
 

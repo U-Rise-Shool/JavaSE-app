@@ -13,16 +13,17 @@ public class ArrayStorage {
     }
 
     public void update(Resume r) {
-        // TODO check if resume present
+        // TODO check resume present
         System.out.println("ERROR");
 
     }
 
     public void save(Resume r) {
-        // TODO check if resume not present
+        // TODO check resume not present
     }
 
     public Resume get(String uuid) {
+        // TODO check resume present
         for (int i = 0; i < size; i++) {
             if (uuid == storage[i].getUuid()) {
                 return storage[i];
@@ -32,7 +33,7 @@ public class ArrayStorage {
     }
 
     public void delete(String uuid) {
-        // TODO check if resume present
+        // TODO check resume present
         for (int i = 0; i < size; i++) {
             if (uuid == storage[i].getUuid()) {
                 storage[i] = storage[size - 1];

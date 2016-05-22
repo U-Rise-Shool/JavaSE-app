@@ -19,6 +19,7 @@ public class ArrayStorage {
     }
 
     public void save(Resume r) {
+        // TODO check for overflow
         // TODO check resume not present
     }
 

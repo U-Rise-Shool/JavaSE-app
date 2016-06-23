@@ -15,7 +15,7 @@ import static org.junit.Assert.assertTrue;
  * gkislin
  * 12.06.2016
  */
-public abstract class AbstractArrayStorageTest {
+public abstract class AbstractStorageTest {
     private Storage storage;
 
     private static final String UUID_1 = "uuid1";
@@ -35,7 +35,7 @@ public abstract class AbstractArrayStorageTest {
         RESUME_4 = new Resume(UUID_4);
     }
 
-    protected AbstractArrayStorageTest(Storage storage) {
+    protected AbstractStorageTest(Storage storage) {
         this.storage = storage;
     }
 
@@ -91,6 +91,7 @@ public abstract class AbstractArrayStorageTest {
         storage.save(RESUME_1);
     }
 
+    // TODO remain only for Arrays implementations
     @Test(expected = StorageException.class)
     public void saveOverflow() throws Exception {
         try {

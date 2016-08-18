@@ -2,6 +2,7 @@ package com.urise.webapp.storage;
 
 import com.urise.webapp.exception.StorageException;
 import com.urise.webapp.model.Resume;
+import com.urise.webapp.storage.serializer.StreamSerializer;
 
 import java.io.*;
 
@@ -9,20 +10,17 @@ import java.io.*;
  * gkislin
  * 28.07.2016
  */
-public class ObjectStreamStorage extends AbstractFileStorage {
-    protected ObjectStreamStorage(File directory) {
-        super(directory);
-    }
+public class ObjectStreamStorage implements StreamSerializer {
 
     @Override
-    protected void doWrite(Resume r, OutputStream os) throws IOException {
+    public void doWrite(Resume r, OutputStream os) throws IOException {
         try (ObjectOutputStream oos = new ObjectOutputStream(os)) {
             oos.writeObject(r);
         }
     }
 
     @Override
-    protected Resume doRead(InputStream is) throws IOException {
+    public Resume doRead(InputStream is) throws IOException {
         try (ObjectInputStream ois = new ObjectInputStream(is)) {
             return (Resume) ois.readObject();
         } catch (ClassNotFoundException e) {

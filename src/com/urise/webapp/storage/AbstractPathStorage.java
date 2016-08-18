@@ -1,21 +1,20 @@
 package com.urise.webapp.storage;
 
-import com.urise.webapp.exception.StorageException;
 import com.urise.webapp.model.Resume;
 
-import java.io.*;
+import java.io.IOException;
+import java.io.InputStream;
+import java.io.OutputStream;
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
-import java.util.ArrayList;
-import java.util.List;
 import java.util.Objects;
 
 /**
  * gkislin
  * 22.07.2016
  */
-public abstract class AbstractPathStorage extends AbstractStorage<Path> {
+public abstract class AbstractPathStorage {// extends AbstractStorage<Path> {
     private Path directory;
 
     protected abstract void doWrite(Resume r, OutputStream os) throws IOException;
@@ -29,7 +28,7 @@ public abstract class AbstractPathStorage extends AbstractStorage<Path> {
             throw new IllegalArgumentException(dir + " is not directory or is not writable");
         }
     }
-
+/*
     @Override
     public void clear() {
         try {
@@ -105,4 +104,5 @@ public abstract class AbstractPathStorage extends AbstractStorage<Path> {
         }
         return list;
     }
+*/
 }

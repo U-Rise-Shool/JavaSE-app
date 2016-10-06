@@ -15,6 +15,8 @@ import java.util.Map;
  * gkislin
  * 19.09.2016
  */
+// TODO implement Section (except OrganizationSection)
+// TODO Join and split ListSection by `\n`
 public class SqlStorage implements Storage {
     public final SqlHelper sqlHelper;
 

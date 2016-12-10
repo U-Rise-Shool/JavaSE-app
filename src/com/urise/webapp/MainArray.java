@@ -25,8 +25,8 @@ public class MainArray {
 
 
         printAll();
-        /*System.out.println("Get r1: " + arrayStorage.get(r1.getUuid()));
-        System.out.println("Size: " + arrayStorage.size());
+        System.out.println("Get r1: " + arrayStorage.get(r1.getUuid()));
+        /*System.out.println("Size: " + arrayStorage.size());
 
         printAll();
         arrayStorage.delete(r1.getUuid());

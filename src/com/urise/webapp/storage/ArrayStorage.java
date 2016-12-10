@@ -14,13 +14,29 @@ public class ArrayStorage {
     }
 
 
-    public void update() {
+    public void update(Resume r) {
+    for(int i=0;i<size;i++){
+        if(r.equals(storage[i])){
+            storage[i]=r;
+        }
+        else
+            System.out.println("Error");
+    }
 
     }
 
 
     public void save(Resume r) {
+    for (int i = 0;i<size;i++){
+        if(!(r.equals(storage[i].getUuid()))&&storage[i]==null){
+            storage[i] = r;
+            size++;
+            System.out.println(size);
 
+
+        }
+
+    }
 
     }
 
@@ -46,7 +62,8 @@ public class ArrayStorage {
      * @return array, contains only Resumes in storage (without null)
      */
     public Resume[] getAll(){
-        return new Resume[0];
+        Resume[] result = new Resume[size];
+        return result;
     }
 
     public int size() {

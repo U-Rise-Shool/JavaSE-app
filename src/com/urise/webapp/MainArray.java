@@ -18,12 +18,14 @@ public class MainArray {
         Resume r3 = new Resume();
         r3.setUuid("uuid3");
 
-        System.out.println(r1==r2);
+
         arrayStorage.save(r1);
         arrayStorage.save(r2);
         arrayStorage.save(r3);
 
-        System.out.println("Get r1: " + arrayStorage.get(r1.getUuid()));
+
+        printAll();
+        /*System.out.println("Get r1: " + arrayStorage.get(r1.getUuid()));
         System.out.println("Size: " + arrayStorage.size());
 
         printAll();
@@ -32,13 +34,16 @@ public class MainArray {
         arrayStorage.clear();
         printAll();
 
-        System.out.println("Size: " + arrayStorage.size());
-    }
 
+       System.out.println("Size: " + arrayStorage.size());
+       */
+
+    }
     static void printAll() {
-        System.out.println("\nGet All");
+       // System.out.println("\nGet All");
         for (Resume r : arrayStorage.getAll()) {
             System.out.println(r);
         }
+
     }
 }

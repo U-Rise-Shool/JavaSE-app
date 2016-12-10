@@ -10,7 +10,7 @@ public class ArrayStorage {
     private int size;
 
     public void clear() {
-
+//
     }
 
 

@@ -1,6 +1,11 @@
+package com.urise.webapp;
+
+import com.urise.webapp.model.Resume;
+import com.urise.webapp.storage.ArrayStorage;
+
 /**
  *
- * Test for ArrayStorage
+ * Test for com.urise.webapp.storage.ArrayStorage
  */
 public class MainArray {
     static ArrayStorage arrayStorage = new ArrayStorage();
@@ -13,6 +18,7 @@ public class MainArray {
         Resume r3 = new Resume();
         r3.uuid = "uuid3";
 
+        System.out.println(r1==r2);
         arrayStorage.save(r1);
         arrayStorage.save(r2);
         arrayStorage.save(r3);

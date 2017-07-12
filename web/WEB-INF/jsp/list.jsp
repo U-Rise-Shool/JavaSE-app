@@ -13,7 +13,7 @@
 <section>
     <a href="resume?action=add"><img src="img/add.png"></a>
     <br>
-    <table border="1" cellpadding="8" cellspacing="0">
+    <table border="1" cellpadding="8" cellspacing="0" style="margin: auto">
         <tr>
             <th>Имя</th>
             <th>Email</th>

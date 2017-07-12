@@ -17,11 +17,11 @@
 <section>
     <form method="post" action="resume" enctype="application/x-www-form-urlencoded">
         <input type="hidden" name="uuid" value="${resume.uuid}">
+        <h1>Имя:</h1>
         <dl>
-            <dt>Имя:</dt>
-            <dd><input type="text" name="fullName" size=50 value="${resume.fullName}"></dd>
+            <input type="text" name="fullName" size=55 value="${resume.fullName}">
         </dl>
-        <h3>Контакты:</h3>
+        <h2>Контакты:</h2>
         <c:forEach var="type" items="<%=ContactType.values()%>">
             <dl>
                 <dt>${type.title}</dt>
@@ -32,10 +32,10 @@
         <c:forEach var="type" items="<%=SectionType.values()%>">
             <c:set var="section" value="${resume.getSection(type)}"/>
             <jsp:useBean id="section" type="com.urise.webapp.model.Section"/>
-            <h3><a>${type.title}</a></h3>
+            <h2><a>${type.title}</a></h2>
             <c:choose>
                 <c:when test="${type=='OBJECTIVE'}">
-                    <input type='text' name='${type}' size=75 value=<%=section%>>
+                    <input type='text' name='${type}' size=75 value='<%=section%>'>
                 </c:when>
                 <c:when test="${type=='PERSONAL'}">
                     <textarea name='${type}' cols=75 rows=5><%=section%></textarea>
@@ -80,7 +80,7 @@
                                 </dl>
                                 <dl>
                                     <dt>Описание:</dt>
-                                    <dd><textarea name="${type}${counter.index}description" rows=2
+                                    <dd><textarea name="${type}${counter.index}description" rows=5
                                                   cols=75>${pos.description}</textarea></dd>
                                 </dl>
                             </c:forEach>
